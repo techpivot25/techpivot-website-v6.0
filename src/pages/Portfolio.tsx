@@ -319,6 +319,11 @@ const Portfolio = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://techpivot.in/portfolio" />
+        <meta property="og:image" content="https://techpivot.in/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Portfolio | TechPivot Technologies" />
+        <meta name="twitter:description" content="Platforms we've built and shipped across travel, hospitality, healthcare, HR, education, and commerce." />
+        <meta name="twitter:image" content="https://techpivot.in/og-image.png" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

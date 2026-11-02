@@ -16,6 +16,15 @@ const PrivacyPolicy = () => {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://techpivot.in/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | TechPivot Technologies" />
+        <meta property="og:description" content="Read TechPivot Technologies & Consulting's Privacy Policy to understand how we collect, use, and protect your personal information." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://techpivot.in/privacy-policy" />
+        <meta property="og:image" content="https://techpivot.in/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | TechPivot Technologies" />
+        <meta name="twitter:description" content="Read TechPivot Technologies & Consulting's Privacy Policy to understand how we collect, use, and protect your personal information." />
+        <meta name="twitter:image" content="https://techpivot.in/og-image.png" />
       </Helmet>
 
       <Header />

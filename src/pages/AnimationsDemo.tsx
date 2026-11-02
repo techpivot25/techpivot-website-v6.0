@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { NeumorphicButton } from "@/components/ui/neumorphic-button";
 import { HoverCardAnimated } from "@/components/ui/hover-card-animated";
 import { HamburgerMenu } from "@/components/ui/hamburger-menu";
@@ -10,6 +11,10 @@ const AnimationsDemo = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Animation Components | TechPivot</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <Header />
       <main className="pt-24 pb-16">
         <div className="container px-6 lg:px-12">

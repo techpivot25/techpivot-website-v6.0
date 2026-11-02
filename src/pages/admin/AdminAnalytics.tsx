@@ -213,6 +213,7 @@ const AdminAnalytics = () => {
     <>
       <Helmet>
         <title>Blog Analytics | TechPivot Admin</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

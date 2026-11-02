@@ -92,9 +92,25 @@ const BlogDetail = () => {
         <link rel="canonical" href={`https://techpivot.in/blogs/${blog.slug}`} />
         <meta property="og:title" content={blog.title} />
         <meta property="og:description" content={blog.subtitle || blog.title} />
-        {blog.featured_image_url && (
-          <meta property="og:image" content={blog.featured_image_url} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://techpivot.in/blogs/${blog.slug}`} />
+        <meta property="article:published_time" content={blog.publish_date || blog.created_at} />
+        {blog.featured_image_url ? (
+          <>
+            <meta property="og:image" content={blog.featured_image_url} />
+            <meta property="og:image:alt" content={blog.title} />
+            <meta name="twitter:image" content={blog.featured_image_url} />
+            <meta name="twitter:image:alt" content={blog.title} />
+          </>
+        ) : (
+          <>
+            <meta property="og:image" content="https://techpivot.in/og-image.png" />
+            <meta name="twitter:image" content="https://techpivot.in/og-image.png" />
+          </>
         )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blog.title} />
+        <meta name="twitter:description" content={blog.subtitle || blog.title} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",

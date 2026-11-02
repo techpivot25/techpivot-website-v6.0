@@ -16,6 +16,15 @@ const TermsAndConditions = () => {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://techpivot.in/terms-and-conditions" />
+        <meta property="og:title" content="Terms & Conditions | TechPivot Technologies" />
+        <meta property="og:description" content="Read the Terms and Conditions governing your use of TechPivot Technologies & Consulting's website and services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://techpivot.in/terms-and-conditions" />
+        <meta property="og:image" content="https://techpivot.in/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms & Conditions | TechPivot Technologies" />
+        <meta name="twitter:description" content="Read the Terms and Conditions governing your use of TechPivot Technologies & Consulting's website and services." />
+        <meta name="twitter:image" content="https://techpivot.in/og-image.png" />
       </Helmet>
 
       <Header />

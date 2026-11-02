@@ -24,9 +24,17 @@ const Index = () => {
         <meta property="og:description" content="TechPivot builds AI agents, SaaS platforms, mobile apps, custom software and cloud solutions for global enterprises. Book a free consultation today." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://techpivot.in/" />
+        <meta property="og:site_name" content="TechPivot Technologies & Consulting" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://techpivot.in/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="TechPivot Technologies — AI, SaaS and custom software development" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TechPivot Technologies | AI, SaaS & Custom Software Development" />
         <meta name="twitter:description" content="TechPivot builds AI agents, SaaS platforms, mobile apps, custom software and cloud solutions for global enterprises. Book a free consultation today." />
+        <meta name="twitter:image" content="https://techpivot.in/og-image.png" />
+        <meta name="twitter:image:alt" content="TechPivot Technologies — AI, SaaS and custom software development" />
         {/* Preload the hero background so it's discovered immediately instead of
             waiting on CSS parsing — this is the page's LCP element. */}
         <link rel="preload" as="image" href={heroBg} fetchPriority="high" />

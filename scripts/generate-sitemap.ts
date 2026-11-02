@@ -1,5 +1,5 @@
 // Runs before `vite dev` and `vite build` (predev/prebuild hooks); writes public/sitemap.xml.
-import { writeFileSync } from "fs";
+import { writeFileSync, readFileSync, existsSync } from "fs";
 import { resolve } from "path";
 import { createClient } from "@supabase/supabase-js";
 import { openPositions } from "../src/data/jobs";
@@ -59,10 +59,38 @@ const staticEntries: SitemapEntry[] = [
   { path: "/services/consultancy", changefreq: "monthly", priority: "0.8", lastmod: today },
 ];
 
+/**
+ * Fallback when Supabase is unavailable (e.g. local dev without env vars):
+ * use the exported blog list in blogs_data.json at the repo root, so blog
+ * posts are not silently dropped from the sitemap. This file can go stale —
+ * Supabase remains the source of truth whenever it is reachable.
+ */
+function readLocalBlogEntries(): SitemapEntry[] {
+  const localPath = resolve("blogs_data.json");
+  if (!existsSync(localPath)) return [];
+  try {
+    const parsed = JSON.parse(readFileSync(localPath, "utf-8"));
+    const blogs = Array.isArray(parsed) ? parsed : [];
+    const now = new Date().toISOString();
+    return blogs
+      .filter((b: any) => b?.slug && b?.status === "published")
+      .filter((b: any) => !b.publish_date || b.publish_date <= now)
+      .map((b: any) => ({
+        path: `/blogs/${b.slug}`,
+        lastmod: (b.updated_at || b.publish_date || today).split("T")[0],
+        changefreq: "monthly" as const,
+        priority: "0.7",
+      }));
+  } catch (e) {
+    console.warn("Could not read blogs_data.json for sitemap:", (e as Error).message);
+    return [];
+  }
+}
+
 async function fetchBlogEntries(): Promise<SitemapEntry[]> {
   if (!SUPABASE_URL || !SUPABASE_KEY) {
-    console.warn("Skipping blog sitemap entries — Supabase env vars not set.");
-    return [];
+    console.warn("Supabase env vars not set — falling back to blogs_data.json for blog sitemap entries.");
+    return readLocalBlogEntries();
   }
   try {
     const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -72,8 +100,8 @@ async function fetchBlogEntries(): Promise<SitemapEntry[]> {
       .eq("status", "published")
       .lte("publish_date", new Date().toISOString());
     if (error || !data) {
-      console.warn("Could not fetch blogs for sitemap:", error?.message);
-      return [];
+      console.warn("Could not fetch blogs for sitemap:", error?.message, "— falling back to blogs_data.json.");
+      return readLocalBlogEntries();
     }
     return data
       .filter((b: any) => b.slug)
@@ -84,8 +112,8 @@ async function fetchBlogEntries(): Promise<SitemapEntry[]> {
         priority: "0.7",
       }));
   } catch (e) {
-    console.warn("Blog fetch failed:", (e as Error).message);
-    return [];
+    console.warn("Blog fetch failed:", (e as Error).message, "— falling back to blogs_data.json.");
+    return readLocalBlogEntries();
   }
 }
 
