@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import flagIndia from "@/assets/flag-india.png";
 import flagUSA from "@/assets/flag-usa.png";
-import flagCanada from "@/assets/flag-canada.png";
 import heroAI from "@/assets/hero-ai-network.webp";
 import heroWorkspace from "@/assets/hero-workspace.webp";
 
@@ -71,7 +70,6 @@ const About = () => {
 
   const locations = [
     { name: "Chandigarh, India", address: "Sector 17-D, Chandigarh 160017", flag: flagIndia },
-    { name: "Canada", address: "400 Jones Rd, Stoney Creek, ON, L8E 5P4", flag: flagCanada },
     { name: "USA", address: "1711 Woodbine Drive, Brandon, Florida 33510", flag: flagUSA },
   ];
 
