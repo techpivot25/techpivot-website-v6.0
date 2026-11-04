@@ -58,16 +58,16 @@ const capabilities: {
 const Technologies = () => (
   <>
     <Helmet>
-      <title>Capabilities | Algorithmic Infrastructure Optimization | TechPivot</title>
+      <title>Technologies | TechPivot Technologies</title>
       <meta name="description" content="Advanced mathematics that makes software run significantly faster on less hardware — turning the infrastructure you already own into a high-efficiency powerhouse." />
       <meta name="keywords" content="algorithmic acceleration, mathematical framework design, hardware co-design, energy efficiency engineering, simulation validation, cross-industry optimization" />
       <link rel="canonical" href="https://techpivot.in/technologies" />
-      <meta property="og:title" content="Capabilities | Algorithmic Infrastructure Optimization | TechPivot" />
+      <meta property="og:title" content="Technologies | TechPivot Technologies" />
       <meta property="og:description" content="Advanced mathematics that makes software run significantly faster on less hardware — turning the infrastructure you already own into a high-efficiency powerhouse." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://techpivot.in/technologies" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Capabilities | Algorithmic Infrastructure Optimization | TechPivot" />
+      <meta name="twitter:title" content="Technologies | TechPivot Technologies" />
       <meta name="twitter:description" content="Advanced mathematics that makes software run significantly faster on less hardware — turning the infrastructure you already own into a high-efficiency powerhouse." />
     </Helmet>
 

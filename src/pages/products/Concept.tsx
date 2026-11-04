@@ -47,7 +47,7 @@ const Concept = () => {
       metaTitle="TCP/IP Congestion Control Optimization | The Concept | TechPivot"
       metaDescription="Extract more throughput from existing infrastructure with kernel-level congestion control algorithms. No hardware upgrades, no app rewrites. See the concept."
       keywords="network performance optimization, TCP congestion control, kernel level optimization, bandwidth optimization software, network throughput improvement, data centre optimization, infrastructure cost reduction, BBR CUBIC alternative"
-      description={`TechPivot helps infrastructure-heavy companies extract measurable performance from systems they already own by licensing proprietary optimization algorithms that operate at the root/network control layer. Same infrastructure. No app rewrite. Licensed, measurable gains.\n\nWe start with your data. We analyze your infrastructure, data maturity, and business objectives. We conduct a "Proof of Concept" (PoC) using your actual data (securely) to validate the ROI of AI in your specific context.\n\nDeliverable: Data Strategy Report & Technical Feasibility Matrix.`}
+      description={`TechPivot helps infrastructure-heavy companies extract measurable performance from systems they already own by licensing proprietary optimization algorithms that operate at the root/network control layer. Same infrastructure. No app rewrite. Licensed, measurable gains.\n\nWe start with your production environment. We isolate a representative segment, benchmark your current hardware against its theoretical capacity, and quantify the performance delta before you commit to anything.\n\nDeliverable: Infrastructure Waste & Latency Report, followed by a Performance Guarantee for the next phase.`}
       icon={<Lightbulb className="w-8 h-8 text-primary" />}
       showVectorMesh={true}
     >
@@ -110,7 +110,7 @@ const Concept = () => {
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold text-lg leading-snug">2.</span>
                   <span>
-                    <strong className="text-foreground">AI/Data Feasibility Matrix:</strong> An assessment of your business objectives and data maturity, mapped specifically to the optimized capacity identified in our audit.
+                    <strong className="text-foreground">Feasibility Assessment:</strong> An assessment of your business objectives, mapped specifically to the optimized capacity identified in our audit.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">

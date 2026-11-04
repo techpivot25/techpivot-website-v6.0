@@ -160,7 +160,15 @@ const Contact = () => {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setFile(e.target.files[0]);
+      const selectedFile = e.target.files[0];
+      // 10MB cap, matching the job-application form and the server check
+      if (selectedFile.size > 10 * 1024 * 1024) {
+        toast.error("File must be under 10MB");
+        if (fileInputRef.current) fileInputRef.current.value = '';
+        setFile(null);
+        return;
+      }
+      setFile(selectedFile);
     }
   };
 
@@ -358,7 +366,7 @@ const Contact = () => {
                     >
                       <Upload className="w-4 h-4 text-muted-foreground" />
                       <span className="text-muted-foreground text-sm">
-                        {file ? file.name : "Upload Project Document (Optional)"}
+                        {file ? file.name : "Upload Project Document (Optional, max 10MB)"}
                       </span>
                     </div>
                   </div>

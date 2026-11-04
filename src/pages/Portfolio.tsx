@@ -87,7 +87,7 @@ const portfolioProjects: PortfolioProject[] = [
       "Conflict resolution logic for concurrent updates",
       "Built to scale with high SKU counts and order volume",
     ],
-    image: "/images/portfolio/syncmanager.webp",
+    image: "/placeholder.svg",
     icon: RefreshCw,
   },
   {
@@ -122,7 +122,7 @@ const portfolioProjects: PortfolioProject[] = [
       "Parent and staff portals with role-specific views",
       "Built for independent schools and multi-branch institutions",
     ],
-    image: "/images/portfolio/edusuite.webp",
+    image: "/placeholder.svg",
     icon: GraduationCap,
   },
   {
@@ -139,7 +139,7 @@ const portfolioProjects: PortfolioProject[] = [
       "Configurable leave, attendance, and approval workflows",
       "Self-service portals for employees and managers",
     ],
-    image: "/images/portfolio/hrspace.webp",
+    image: "/placeholder.svg",
     icon: Users,
   },
   {
@@ -230,7 +230,7 @@ const portfolioProjects: PortfolioProject[] = [
       "Tradesperson-side job management and scheduling",
       "Trust and verification built into the matching flow",
     ],
-    image: "/images/portfolio/homehero.webp",
+    image: "/placeholder.svg",
     icon: Home,
   },
 ];

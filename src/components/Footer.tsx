@@ -12,6 +12,9 @@ const Footer = () => {
     { label: t("header.nav.saas"), href: "/services/saas-platform" },
     { label: t("header.nav.cloud"), href: "/services/cloud-security" },
     { label: t("header.nav.customSoftware"), href: "/services/custom-software" },
+    { label: "Web Development", href: "/services/web-development" },
+    { label: "Mobile App", href: "/services/mobile-app" },
+    { label: "Staff Augmentation", href: "/services/staff-augmentation" },
     { label: t("header.nav.iot"), href: "/services/iot" },
     { label: t("header.nav.consultancy"), href: "/services/consultancy" },
   ];

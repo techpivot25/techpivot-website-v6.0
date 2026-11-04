@@ -31,7 +31,7 @@ const pillars = [
       "Specialized fine-tuning on domain-specific datasets — Finance, Healthcare, Legal — to ensure accuracy and reduce hallucinations.",
     accent: "text-[#00b8d9]",
     iconBg: "bg-[#00b8d9]/10",
-    href: "/services/ai-models",
+    href: "/services/generative-ai",
   },
   {
     icon: ShieldCheck,
@@ -51,7 +51,7 @@ const pillars = [
       "Utilizing vLLM, TensorRT, and quantization techniques to reduce latency by up to 70% and lower inference costs.",
     accent: "text-[#00b8d9]",
     iconBg: "bg-[#00b8d9]/10",
-    href: "/services/infrastructure",
+    href: "/technologies",
   },
   {
     icon: GitBranch,

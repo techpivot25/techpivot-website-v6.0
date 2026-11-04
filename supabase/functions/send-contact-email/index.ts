@@ -284,6 +284,17 @@ Deno.serve(async (req: Request): Promise<Response> => {
         for (let i = 0; i < binaryString.length; i++) {
           bytes[i] = binaryString.charCodeAt(i);
         }
+        // 10MB cap, mirrors the frontend check and the job-application function
+        if (bytes.length > 10 * 1024 * 1024) {
+          await client.close();
+          return new Response(
+            JSON.stringify({ error: "Attached file is too large (max 10MB)" }),
+            {
+              status: 400,
+              headers: { "Content-Type": "application/json", ...corsHeaders },
+            }
+          );
+        }
         attachment = {
           filename: fileName,
           content: bytes,

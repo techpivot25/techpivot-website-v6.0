@@ -18,7 +18,7 @@ const coreValues = [
   {
     icon: Users,
     title: "Collaboration",
-    description: "We embed with client engineering teams rather than hand off architecture diagrams, because the seam between systems is where the work actually lives.Working closely with clients to understand and exceed their expectations"
+    description: "We embed with client engineering teams rather than hand off architecture diagrams, because the seam between systems is where the work actually lives. Working closely with clients to understand and exceed their expectations"
   },
   {
     icon: Award,
@@ -28,7 +28,7 @@ const coreValues = [
   {
     icon: Shield,
     title: "Integrity",
-    description: "We tell clients when AI is the wrong tool, when a closed-source dependency is the right call, and when a project should not be built because trust compounds and shortcuts do not.Building trust through transparent and ethical business practices"
+    description: "We tell clients when AI is the wrong tool, when a closed-source dependency is the right call, and when a project should not be built because trust compounds and shortcuts do not. Building trust through transparent and ethical business practices"
   }
 ];
 

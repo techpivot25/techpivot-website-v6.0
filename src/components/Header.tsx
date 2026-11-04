@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, ArrowRight, Bot, Sparkles, Cloud, Shield, Code, Cpu, Lightbulb, Rocket, BookOpen, Mail, Briefcase, Users, FileText, ShieldAlert, FlaskConical, ShieldCheck, TrendingUp, ImageIcon } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight, Bot, Sparkles, Cloud, Shield, Code, Cpu, Lightbulb, Rocket, BookOpen, Mail, Briefcase, Users, FileText, ShieldAlert, FlaskConical, ShieldCheck, TrendingUp, ImageIcon, Globe, Smartphone } from "lucide-react";
 import logoDark from "@/assets/logo-dark.webp";
 import logoLight from "@/assets/logo-light.webp";
 import { useTheme } from "next-themes";
@@ -27,6 +27,9 @@ const Header = () => {
     { label: t("header.nav.saas"), href: "/services/saas-platform", icon: Cloud },
     { label: t("header.nav.cloud"), href: "/services/cloud-security", icon: Shield },
     { label: t("header.nav.customSoftware"), href: "/services/custom-software", icon: Code },
+    { label: "Web Development", href: "/services/web-development", icon: Globe },
+    { label: "Mobile App", href: "/services/mobile-app", icon: Smartphone },
+    { label: "Staff Augmentation", href: "/services/staff-augmentation", icon: Users },
     { label: t("header.nav.iot"), href: "/services/iot", icon: Cpu },
     { label: t("header.nav.consultancy"), href: "/services/consultancy", icon: Lightbulb },
   ];

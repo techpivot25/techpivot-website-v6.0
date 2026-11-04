@@ -36,7 +36,7 @@ const leaders = [
 
 const boardMembers = [
   {
-    name: "MANISHH JAIIN",
+    name: "Manish Jain",
     role: "Board Member & VP Sales",
     bio: "Enterprise Sales Leader and IT Infrastructure Specialist with 22+ years of experience driving networking, optical connectivity, and data center business. Building CXO relationships, accelerating revenue growth, leading strategic market expansion, and delivering customer-centric technology solutions.",
     linkedin: "https://www.linkedin.com/in/manishjain08/",
