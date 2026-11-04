@@ -253,7 +253,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
       <p style="color: #333; line-height: 1.8;">In the meantime, feel free to explore more about us at <a href="https://techpivot.in" style="color: #007bff;">techpivot.in</a></p>
       <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
         <p style="color: #666; font-size: 14px; margin: 0;">Best regards,<br><strong style="color: #333;">The TechPivot Team</strong></p>
-        <p style="color: #999; font-size: 12px; margin-top: 10px;">info@techpivot.in<br>India &bull; USA &bull; Canada &bull; UAE</p>
+        <p style="color: #999; font-size: 12px; margin-top: 10px;">info@techpivot.in<br>India &bull; USA</p>
       </div>
     </div>`;
 

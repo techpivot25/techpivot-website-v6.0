@@ -174,7 +174,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "info@techpivot.in", href: "mailto:info@techpivot.in" },
-    { icon: MapPin, label: "Offices", value: "India • USA • Canada • UAE", href: null },
+    { icon: MapPin, label: "Offices", value: "India • USA", href: null },
   ];
 
   return (
