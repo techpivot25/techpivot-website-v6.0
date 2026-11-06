@@ -108,7 +108,7 @@ const AdminLogin = () => {
       }
 
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/admin/reset-password`,
+        redirectTo: "https://techpivot.in/admin/reset-password",
       });
 
       if (error) throw error;
